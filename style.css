@@ -1,8 +1,18 @@
-.container{
+body {
+    /* font-family: Arial, sans-serif; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* .container{
     height: 100%;
     width: 100%;
     
-}
+} */
+
+
+
 
 .imgmain{
     width: 100%;
@@ -12,11 +22,12 @@
 }
 .list{
     position: relative; 
-    display: flex;
+    /* display: flex; */
+    display: none;
      gap: 50px;
      align-items: center;
      font-weight: 900;
-     margin-right: 50px;
+     /* margin-right: 50px; */
      align-content: space-around;
      color: aliceblue; 
 }
@@ -32,6 +43,7 @@
 .upperpart{
     display: flex;
     font-weight: 700;
+    justify-content: space-around;
     
     
 }
@@ -194,6 +206,9 @@
     padding: 1%;
     font-weight: 700;
 }
+
+
+/* -------------------------------------------------- */
 
 
 

@@ -1,0 +1,614 @@
+/* 
+line 1 to 325 open code 
+line 331 to 384 min width 768px
+line 386 to 438 min width 1024px
+line 443 to 456 min width 1236px
+*/
+.main {
+    width: 100%;
+    height: 800px; 
+    background-image: linear-gradient(#050a23bf, #050a23bf), url("https://mcps.vercel.app/static/media/home-page-header.650ac40902bdb8be3bd8.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.nav{
+    display: flex;
+    height: 65px;
+    width: 100%;
+    justify-content: space-between;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.logo img{
+    margin-left: 12px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.logo p{
+    font-size: 24px;
+    font-weight: 400;
+    color: white;
+}
+.items{ 
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+    height: 40px;
+    margin-top: 10px;
+    margin-right: 5%;
+}
+.items p{
+    display: none;
+}
+.items p:hover{
+    color: red;
+}
+.items i{
+    color: white;
+    font-size: 30px;
+    padding-top: 5px;
+    margin-left: 50%;
+    text-align: center;
+    width: 55px;
+    height: 38px;
+    border-radius: 8px;
+    /* background-color:whitesmoke; */
+} 
+.sec{
+    display: grid;
+    align-items: center;
+    text-align: center;
+    height: 400px;
+    width: 90%;
+    margin-top: 100px;
+    margin-left: 5%;
+
+}
+.name{
+    font-size: 30px;
+    color: white;
+}
+.name2{
+    font-size: 52px;
+    margin-top: -60px;
+    color: white;
+}
+.name3{
+    width: 89%;
+    margin-top: -80px;
+    margin-left: 42px;
+    text-align: left;
+    color: white;
+}
+
+.btn button{
+    width: 180px;
+    height: 55px;
+    border-radius: 12px;
+    font-size: 19px;
+    color: white;
+} 
+.btn1{
+    margin-right: 10px;
+    border: 0px;
+    background-color: red;
+
+}
+.btn2{
+    background-color: transparent;
+}
+.btn2:hover{
+    background-color: antiquewhite;
+    color: black;
+}
+.third{
+    width: 100%;
+    text-align: center;
+    font-size: 27px;
+    font-weight: 100;
+    font-family: Cambria;
+}
+.main2{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.cards{
+    height: 200px;
+    width: 500px;
+    text-align: center;
+}
+.h{
+    color: red;
+    margin-top: 12px;
+    font-size: 52px;
+}
+.b{
+    font-size: 22px;
+    font-weight:600;
+    margin-top: -12px;
+}
+.f{
+    font-size: large;
+    margin-top: -12px;
+    text-align: left;
+}
+.main3{
+    display: grid;
+    background-color: whitesmoke;
+    height:600px ;
+    width: 100%;
+    margin-top: 50px;
+    padding-left: 75px;
+    padding-top: 40px;
+}
+.main3-1 span{
+    font-size: 32px;
+    font-weight:lighter;
+}
+.main3-1 p{
+    font-size: 20px;
+    width: 59%;
+}
+.main3-1 button{
+    width: 160px;
+    height: 45px;
+    border-radius: 12px;
+    font-size: 19px;
+    color: white;
+    border: 0px;
+    background-color: red;
+}
+.main3-1 button:hover{
+    background-color: darkred;
+}
+.main3 img{
+    margin-top: 50px;
+    width: 80%;
+    height: 60%;
+}
+.frq{
+    width: 100%;
+    margin-top: 40px;
+    text-align: center;
+}
+.frq span{
+    font-size: 32px;
+}
+.frq p{
+    margin-left: 50px;
+    width: 90%;
+    margin-top: 40px;
+    font-size: 18px;
+}
+.que{
+    margin-top: 40px;
+}
+.que button{
+    background-color: transparent;
+    text-align:left;
+    font-size: 20px;
+    border: 0px;
+    width: 85%;
+    height: 50px;
+}
+.que button:hover{
+    background-color:rgba(228, 220, 220, 0.71);
+    border-radius: 6px;
+}
+.que hr{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 85%;
+    height: 0px;
+}
+.main4{
+    background-image: linear-gradient(#050a23bf, #050a23bf), url("https://mcps.vercel.app/static/media/blog-section-img.05f4eecbe2f5a8e55766.jpg");
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main4 span{
+    width: 100%;
+    height: 45px;
+    color: white;
+    font-size: 32px;
+}
+.blog{
+    display: grid;    
+}
+.blog-box{
+    text-align: left;
+    width: 500px;
+    height: 500px;
+    border-radius: 7px;
+    margin-top: 70px;
+    margin-left: 40px;
+    background-color: white;
+    color: black;
+}
+.blog-box span{
+    margin-left: 12px;
+    color: black;
+    font-size: 28px;
+}
+.blog-box p{
+    width: 470px;
+    margin-left: 12px;
+    font-size: 16px; 
+}
+.blog-box:hover{
+    width: 520px;
+    height: 520px;
+}
+.blog-box img{
+    width: 100%;
+    height: 68%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.main4 button{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 160px;
+    height: 45px;
+    border-radius: 12px;
+    font-size: 19px;
+    color: white;
+    border: 0px;
+    background-color: red;
+}
+.main4 button:hover{
+    background-color: darkred;
+}
+
+.icon{
+    display: grid;
+    margin-left: 60px;
+    width: 100%;
+}
+.icons{
+    margin-top: 50px;
+    height: 150px;
+    width: 100%;
+    font-size: 36px;
+    color: red;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+}
+.icon1 button{
+    margin-top: 60px;
+    width: 160px;
+    height: 45px;
+    border: 1px solid red;
+    border-radius: 12px;
+    font-size: 19px;
+    color: red;
+    background-color:transparent
+}
+.icon1 button:hover{
+    background-color: red;
+    color: white;
+}
+.icons i:hover{
+    color: black;
+}
+.foot-item{
+   margin-top: -70px;
+   font-size: 18px;
+}
+.foot-item p{
+    color: red;
+    margin-top: -18px;
+}
+.foot-item p:hover{
+    color: black;
+}
+.address{
+    display: grid;
+    gap: 12px;
+    margin-top: 18px;
+    font-size: 18px;
+}
+.foot{
+    background-color: whitesmoke;
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 2px;
+    height: 60px;
+    width: 100%;
+}
+
+
+@media only screen and (min-width:768px){
+    .name2{
+        margin-top: -80px;
+        }
+    .name3{
+        margin-top: -120px;
+    } 
+     .btn{
+        margin-top: -120px;
+    } 
+    .blog{
+        grid-template-columns: 1fr 1fr ;
+    }
+    .blog-box{
+        width: 330px;
+        margin-left: 20px;
+    }
+    .blog-box p{
+        font-size: 18px;
+        width: 280px;
+        margin-top: 40px;
+    }
+    .blog-box:hover{
+        width: 335px; 
+    }
+    .blog-box img{
+        height: 48%;
+    }
+    .icon{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 10%;
+        margin-top: 30px;
+        margin-left: 5px;
+        height: 180px;
+        padding-top: 8px;
+    }
+    .icons{
+        margin-top: 15px;
+        margin-left: 0px;
+    }
+    .icon1 button{
+        margin-top: 0px;
+    }
+    .foot-item{
+        margin-top: 30px;
+        width: 140px;
+        font-size: 22px;
+     } 
+      .address{
+        height: 150px;
+        margin-top: 0px;
+    } 
+}
+
+@media only screen and (min-width:1024px){
+    .items i{
+        display: none;
+    }
+    .items p{
+        display: inline;
+        font-size: large;
+        font-weight: 100;
+        color: rgb(255, 255, 255);
+    } 
+    
+    .main2{
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+        margin-left: 10px;
+        height: 300px;  
+        gap: 8px;   
+    }
+    .cards{
+        width: 90%;
+    }
+    .main3{
+        grid-template-columns: 1fr 1fr;
+        height: 350px;
+    }
+     .main3-1{
+        margin-top: 45px;
+    }
+    .main3 img{
+        margin-top:15px;
+        width: 70%;
+        height: 80%;
+    }
+    .frq{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .blog{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .blog-box{
+        width: 300px;
+        margin-left: 15%;
+    }
+    .blog-box:hover{
+        width: 305px; 
+    }
+    .blog-box img{
+        height: 40%;
+    }
+    .icon{
+        gap: 20%;
+    }
+}
+
+
+
+@media only screen and (min-width:1236px) {
+    .name{
+        font-size: 34px;
+    }
+    .name2{
+        font-size: 54px;
+    }
+    .name3{
+        font-size: 20px;
+     }
+    .foot p{
+        font-size: 18px;
+    }
+}
+
+
+/* Courses.html css  :-*/
+.cmain{
+    width: 100%;
+    height: 600px; 
+    background-image: linear-gradient(#050a23bf, #050a23bf), url("https://mcps.vercel.app/static/media/courses-page-header.f9054ff892a8987b3144.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.csec{
+    display: grid;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    margin-top: 100px;
+    margin-left: 5%;
+
+}
+.cname{
+    font-size: 54px;
+    color: white;
+}
+.cname1{
+    font-size: 18px;
+    width: 62%;
+    margin-top: -20px;
+    margin-left: 20%;
+    text-align: center;
+    color: white;
+}
+.cfrq{
+    width: 100%;
+    height: 480px;
+    margin-top: 40px;
+    padding-top: 30px;
+    text-align: center;
+    background-color: rgb(42, 36, 36);
+    color: white;
+}
+.cfrq span{
+    font-size: 32px;
+}
+.cfrq p{
+    margin-left: 50px;
+    width: 85%;
+    margin-top: 40px;
+    font-size: 18px;
+}
+.cque button{
+    background-color: white;
+}
+.cmain1{
+    display: grid;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    width: 100%;
+}
+.cmain1 div{
+    background-color: red;
+    width: 500px;
+    height: 350px;
+    border-radius: 8px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+}
+
+.cmain1 p{
+    margin-top: 20%;
+    font-size: 20px;
+    color: white;
+}
+.cmain1 span{
+    font-size: 32px;
+    font-weight:800px;
+    color: red;
+}
+.cbox1{
+    background-image:linear-gradient(#050a23bf, #050a23bf), url("https://mcps.vercel.app/static/media/art-course.d167903288709e7b706a.jpg");
+}
+.cbox2{
+    background-image:linear-gradient(#050a23bf, #050a23bf), url("https://mcps.vercel.app/static/media/business-course.e9859915afe1f917745f.jpg");
+}
+.cbox3{
+    background-image:linear-gradient(#050a23bf, #050a23bf), url("https://mcps.vercel.app/static/media/computer-science-course.fc73b0ea478752709706.jpg");
+}
+.cbox4{
+    background-image:linear-gradient(#050a23bf, #050a23bf), url("https://mcps.vercel.app/static/media/education-course.6eb601f4060ae6e5df3d.jpg");
+}
+.cbox5{
+    background-image:linear-gradient(#050a23bf, #050a23bf), url("https://mcps.vercel.app/static/media/healthcare-course.6ba6fb60b789218ab030.jpg");
+}
+.cbox6{
+    background-image:linear-gradient(#050a23bf, #050a23bf), url("https://mcps.vercel.app/static/media/law-course.dad53451325d3f3cf46e.jpg");
+}
+.cbox7{
+    background-image:linear-gradient(#050a23bf, #050a23bf), url("https://mcps.vercel.app/static/media/music-course.9da9e0d94468384a342e.jpg");
+}
+.cbox8{
+    background-image:linear-gradient(#050a23bf, #050a23bf), url("https://mcps.vercel.app/static/media/sport-course.3afdcda17d55dee9738f.jpg");
+}
+@media only screen and (min-width:768px){
+    .cmain1 div{
+        width: 650px;
+        height: 500px;
+        /* border-radius: 8px; */
+    }  
+    .cmain1 p{
+        margin-top: 30%;
+        width: 89%;  
+        margin-left: 3%;
+    }
+}
+@media only screen and (min-width:1024px){
+    .cmain1{
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 15%;
+        padding-left: 2%;
+    }
+    .cmain1 div{
+        width: 480px;
+        height: 300px;
+        /* margin-left: 2%; */
+        border-radius: 8px;
+    }
+    .cmain1 p{
+        margin-top: 10%;
+    }
+}
+@media only screen and (min-width:1236px){
+    .cmain1 div{
+        width: 550px;
+        height: 450px;
+    }
+    .cmain1 p{
+        margin-top: 30%;
+    }
+}
+/* aboutus.html */
+
+.athird{
+    height: 800px;
+    margin-top: 35px;
+    padding-top: 30px;
+    background-color: rgba(56, 18, 18, 0.888);
+}
+.athird h2{
+    color: white;
+}
+.ac{
+    background-color: white;
+}
