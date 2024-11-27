@@ -4,6 +4,13 @@ line 331 to 384 min width 768px
 line 386 to 438 min width 1024px
 line 443 to 456 min width 1236px
 */
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
 .main {
     width: 100%;
     height: 800px; 
@@ -331,6 +338,8 @@ line 443 to 456 min width 1236px
 }
 
 
+
+
 @media only screen and (min-width:768px){
     .name2{
         margin-top: -80px;
@@ -461,13 +470,48 @@ line 443 to 456 min width 1236px
 /* Courses.html css  :-*/
 .cmain{
     width: 100%;
-    height: 600px; 
+    height: 450px; 
     background-image: linear-gradient(#050a23bf, #050a23bf), url("https://mcps.vercel.app/static/media/courses-page-header.f9054ff892a8987b3144.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
-.csec{
+
+.headder{
+    display: flex;
+    color: aliceblue;
+    justify-content: space-between;
+    padding-top: 2%;
+    padding-left: 40px;
+}
+ .logo-course img{
+  height: 70px;
+  width: 70px;
+ }
+ .item-course{
+    display: flex;
+    /* justify-content: space-between; */
+    margin-right: 50px;
+    gap: 50px;
+ }
+ .course-dec{
+    display: grid;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    margin-top: 100px;
+    margin-left: 5%;
+    color: white;
+    padding: 2%;
+ }
+
+ .course-dec h1{
+    font-size: 50px;
+    margin-bottom: 30px;
+ }
+ 
+
+/* .csec{
     display: grid;
     align-items: center;
     text-align: center;
@@ -560,7 +604,7 @@ line 443 to 456 min width 1236px
 }
 .cbox8{
     background-image:linear-gradient(#050a23bf, #050a23bf), url("https://mcps.vercel.app/static/media/sport-course.3afdcda17d55dee9738f.jpg");
-}
+} */
 @media only screen and (min-width:768px){
     .cmain1 div{
         width: 650px;

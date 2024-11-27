@@ -305,68 +305,103 @@ let data =  [{
    "last_name": "Rubinov",
    "email": "arubinov0@prweb.com",
    "gender": "Female",
-   "ip_address": "4.25.213.14"
+   "ip_address": "4.25.213.14",
+   "salery": 10000,
  }, {
    "id": 2,
    "first_name": "Sarena",
    "last_name": "Gut",
    "email": "sgut1@usda.gov",
    "gender": "Female",
-   "ip_address": "165.183.145.15"
+   "ip_address": "165.183.145.15",
+   "salery": 50000,
  }, {
    "id": 3,
    "first_name": "Jacquette",
    "last_name": "Leal",
    "email": "jleal2@cmu.edu",
    "gender": "Female",
-   "ip_address": "136.79.88.6"
+   "ip_address": "136.79.88.6",
+   "salery": 82000,
  }, {
    "id": 4,
    "first_name": "Fawne",
    "last_name": "Purkins",
    "email": "fpurkins3@free.fr",
    "gender": "Female",
-   "ip_address": "41.96.173.217"
+   "ip_address": "41.96.173.217",
+   "salery": 88000,
  }, {
    "id": 5,
    "first_name": "Zacharia",
    "last_name": "Elvins",
    "email": "zelvins4@yandex.ru",
    "gender": "Male",
-   "ip_address": "12.218.236.92"
+   "ip_address": "12.218.236.92",
+   "salery": 85000,
  }, {
    "id": 6,
    "first_name": "Karim",
    "last_name": "Harpur",
    "email": "kharpur5@slashdot.org",
    "gender": "Male",
-   "ip_address": "39.140.108.163"
+   "ip_address": "39.140.108.163",
+   "salery": 60000,
  }, {
    "id": 7,
    "first_name": "Doyle",
    "last_name": "Batham",
    "email": "dbatham6@cdbaby.com",
    "gender": "Male",
-   "ip_address": "146.186.250.17"
+   "ip_address": "146.186.250.17",
+   "salery": 70000,
  }, {
    "id": 8,
    "first_name": "Base",
    "last_name": "Lakey",
    "email": "blakey7@hubpages.com",
    "gender": "Male",
-   "ip_address": "249.124.77.126"
+   "ip_address": "249.124.77.126",
+   "salery": 90000,
  }, {
    "id": 9,
    "first_name": "Jeremiah",
    "last_name": "Champley",
    "email": "jchampley8@samsung.com",
    "gender": "Male",
-   "ip_address": "64.143.25.17"
+   "ip_address": "64.143.25.17",
+   "salery": 80000,
+   
+   
  }]
 
  console.log(data[0])
  console.log(data[8].email)
-
+let totalsal = 0
  for(i of data){
-   console.log(i.email)
+   // console.log(i.email)
+   // console.log(i.salery)
+ totalsal = totalsal + i.salery
  }
+ console.log(totalsal)
+   
+ let totalmale = 0;
+ let totalfemale = 0;
+ for(i of data){
+   if(i.gender==="Male"){
+      totalmale++;
+   }
+   else if(i.gender==="Female"){
+      totalfemale++;
+   }
+ }
+ console.log(totalmale);
+ console.log(totalfemale);
+
+ let emp = 0;
+ for(i of data){
+   if(i.salery>=50000){
+      emp++;
+   }
+ }
+console.log(`number of employe which salary above to 50000  = ${emp}`)
