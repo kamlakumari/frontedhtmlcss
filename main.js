@@ -422,54 +422,54 @@
 // Filter users who live in the 'USA' and have at least one order with an amount greater than 50
 
 
-const complexData = [
-   {
-     id: 1,
-     name: "John Doe",
-     age: 30,
-     address: {
-       street: "123 Main St",
-       city: "Anytown",
-       country: "USA",
-     },
-     orders: [
-       { orderId: "A123", amount: 50.75, status: "completed" },
-       { orderId: "B456", amount: 30.25, status: "pending" },
-     ],
-   },
-   {
-     id: 2,
-     name: "Jane Smith",
-     age: 25,
-     address: {
-       street: "456 Oak St",
-       city: "Othercity",
-       country: "USA",
-     },
-     orders: [
-       { orderId: "C789", amount: 100.5, status: "completed" },
-       { orderId: "D012", amount: 75.2, status: "completed" },
-     ],
-   },
- ]
+// const complexData = [
+//    {
+//      id: 1,
+//      name: "John Doe",
+//      age: 30,
+//      address: {
+//        street: "123 Main St",
+//        city: "Anytown",
+//        country: "USA",
+//      },
+//      orders: [
+//        { orderId: "A123", amount: 50.75, status: "completed" },
+//        { orderId: "B456", amount: 30.25, status: "pending" },
+//      ],
+//    },
+//    {
+//      id: 2,
+//      name: "Jane Smith",
+//      age: 25,
+//      address: {
+//        street: "456 Oak St",
+//        city: "Othercity",
+//        country: "USA",
+//      },
+//      orders: [
+//        { orderId: "C789", amount: 100.5, status: "completed" },
+//        { orderId: "D012", amount: 75.2, status: "completed" },
+//      ],
+//    },
+//  ]
 
 
  // / Filter users who are aged 25 or younger.
- let user = 0;
- for(u of complexData){
-   if(u.age>25){
-      user++
-   }
- }
- console.log(`User who is Younger than 25 ${user}`)
+//  let user = 0;
+//  for(u of complexData){
+//    if(u.age>25){
+//       user++
+//    }
+//  }
+//  console.log(`User who is Younger than 25 ${user}`)
 
 //  -----------------------------------------------------------------------
 
 // / Map the array to get an array of user names.
 
- for(u of complexData){
-   console.log(u.name)
- }
+//  for(u of complexData){
+//    console.log(u.name)
+//  }
 
 
 //  ------------------------------------------------------------------------
@@ -477,35 +477,207 @@ const complexData = [
  
 
 
-for(u of complexData){
-   if(u.address.country == 'USA'){
+// for(u of complexData){
+//    if(u.address.country == 'USA'){
      
-     if(u.orders[0].amount || u.orders[1].amount > 50){
-      console.log(u)
-     }
-   }
- }
+//      if(u.orders[0].amount || u.orders[1].amount > 50){
+//       console.log(u)
+//      }
+//    }
+//  }
 
-//  console.log(u)                 //????
-
+//  console.log(u)                
 
 //  -------------------------------------------------------------------
 // Map the array to get an array of order IDs.
 
-for(d of complexData){
-   console.log(`the id of complexData ${d.id}`)
-}
+// for(d of complexData){
+//    console.log(`the id of complexData ${d.id}`)
+// }
 
 // ---------------------------------------------------------------------
 // Filter users who have at least one order with a status of 'pending'.
  
-for(data of complexData){
-      for(a of data.orders){
-         if(a.status == 'pending'){
-            console.log(a)
-         }
-      }
-}  
+// for(data of complexData){
+//       for(a of data.orders){
+//          if(a.status == 'pending'){
+//             console.log(a)
+//          }
+//       }
+// }  
 // -------------------------------------------------------------------
+
+
+// About function
+
+// Create a function greet that takes two positional arguments: name and greeting, and returns a personalized greeting message.
+
+function greet(name, greeting) {
+   return `${greeting}, ${name}!`;
+}
+
+console.log(greet("Avani", "Hello"));
+
+// ---------------------------------------------------------
+
+// Write a function calculatePrice that takes two arguments: price and taxRate. If taxRate is not provided, it should default to 5%.
+
+function calculatePrice(price, taxRate = 0.05) {
+   return price + (price * taxRate);
+}
+
+
+console.log(calculatePrice(100)); 
+console.log(calculatePrice(100, 0.1));
+
+// ------------------------------------------------------------------------
+
+// Create a function sumNumbers that takes an unknown number of arguments using the rest operator and returns their sum.
+
+function sumNumbers(...numbers) {
+   return numbers.reduce((sum, number) => sum + number, 0);
+}
+
+
+console.log(sumNumbers(1, 2, 3, 4)); 
+console.log(sumNumbers(10, 20));     
+console.log(sumNumbers());
+
+// ========================================================================
+
+// Create a function introduce that takes three positional arguments: firstName, lastName, and age, and returns a sentence introducing the person.
+
+function introduce(firstName, lastName, age) {
+   return `Hello, my name is ${firstName} ${lastName} and I am ${age} years old.`;
+}
+
+
+console.log(introduce("Kamla", "Bharia", 25)); 
+
+
+console.log(introduce("Divyana", "Choudhary", 11)); 
+
+
+// ================================================================================
+
+// Write a function makeSandwich that takes two arguments: breadType and filling. The default value for breadType should be "whole wheat".
+
+function makeSandwich(breadType = "whole wheat", filling) {
+   return `Here is your ${filling} sandwich on ${breadType} bread.`;
+}
+
+
+console.log(makeSandwich("sourdough", "turkey")); 
+
+
+console.log(makeSandwich(undefined, "peanut butter and jelly")); 
+
+// ===================================================================
+
+// Create a function multiply that takes two positional arguments x and y, with a default value for y as 1, and returns the result of multiplying them.
+
+function multiply(x, y = 1) {
+   return x * y;
+}
+
+
+console.log(multiply(5, 3));  
+console.log(multiply(7));     
+console.log(multiply(0, 10)); 
+
+// ================================================================
+
+// Write a function getTotalPrice that takes an unknown 
+// number of prices as arguments using the rest operator and returns the total price.
+
+function getTotalPrice(...prices) {
+   let total = 0;
+   for (let price of prices) {
+       total += price;
+   }
+   return total;
+}
+
+
+console.log(getTotalPrice(10, 20, 30)); 
+console.log(getTotalPrice(5, 15));      
+console.log(getTotalPrice());    
+
+// ==============================================================
+
+// Create a function buildSentence that accepts three arguments: subject, verb, and object. If no object is passed, it should default to "something".
+
+function buildSentence(subject, verb, object = "something") {
+   return `${subject} ${verb} ${object}.`;
+}
+
+
+console.log(buildSentence("I", "like", "JavaScript")); 
+
+
+console.log(buildSentence("She", "wants")); 
+
+
+// ============================================================
+
+
+// Write a function addNumbers that takes an unknown number of numbers using the rest operator and returns the sum.
+
+function addNumbers(...numbers) {
+   let sum = 0;
+   for (let num of numbers) {
+       sum += num;
+   }
+   return sum;
+}
+
+
+console.log(addNumbers(1, 2, 3, 4));  
+console.log(addNumbers(5, 15));        
+console.log(addNumbers(0));            
+console.log(addNumbers());  
+
+// ============================================================
+
+
+// Create a function displayInfo that takes three arguments: name, age, and city. If no city is provided, it should default to "Unknown".
+function displayInfo(name, age, city = "Unknown") {
+   return `${name}, ${age} years old, from ${city}.`;
+}
+
+
+console.log(displayInfo("Alka", 25, "Rajsthan")); 
+
+
+console.log(displayInfo("Babita", 30)); 
+
+// ==================================================
+
+// Write a function orderPizza that takes two arguments: size and topping. If no topping is provided, it should default to "cheese".
+
+function orderPizza(size, topping = "cheese") {
+   return `Order: ${size} pizza with ${topping} topping.`;
+}
+
+
+console.log(orderPizza("medium", "pepperoni")); 
+
+
+console.log(orderPizza("large")); 
+
+// =============================================================
+
+// Create a function makeCoffee that takes one required argument type and an unknown number of optional
+//  ingredients using the rest operator.
+
+function makeCoffee( type , ...ingredients){
+    
+}
+
+
+
+
+
+
 
 
