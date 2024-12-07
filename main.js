@@ -671,8 +671,312 @@ console.log(orderPizza("large"));
 //  ingredients using the rest operator.
 
 function makeCoffee( type , ...ingredients){
-    
+     return `Wav my ${type} tasty and have many ${ingredients}  `
 }
+
+console.log(makeCoffee("Hotcoffee" , "water", "milk", "coffee", "sugar" ))
+
+
+console.log(makeCoffee("Hotcoffee", "unknown" ))
+
+
+
+// Write a function introducePerson that takes two positional arguments name and profession,\
+//  with profession defaulting to "Student".
+  function introducePerson(name , profession = "Student"){
+       return (`My name is ${name} , i am a ${profession}`)
+  }
+   console.log(introducePerson("Avani" , "Teacher" ))
+
+   console.log(introducePerson("Avani"  ))
+
+   // ===================================================================
+
+   // Write a function buildPerson that takes two arguments: firstName and lastName,
+   //  and returns an object representing the person.
+
+   function personDetail(firstName, lastName){
+       return{
+         Firstname : firstName,
+         Lastname : lastName,
+         FullName : `${firstName} ${lastName}`
+       }
+   }
+ let person = personDetail("Kamla" , "Bharia");
+ console.log(person)
+
+//  ================================================================
+
+// Create an object car with primitive properties: brand, model, and year.
+
+let car = {
+   brand : "Dezire",
+   model : "Top",
+   Year : 2016
+}
+console.log(car)
+
+// =================================================================
+
+// Create an object book with non-primitive properties: title, author, and reviews (where reviews is an array of review objects).
+const book = {
+   title: "Premchand Ki Kahani",
+   author: {
+       firstName: "Munsi",
+       lastName: "PremChand",
+   },
+   reviews: [
+       {
+           reviewer: "Sannu",
+           rating: 5,
+           comment: "A timeless classic that captures the human spirit.",
+       },
+       {
+           reviewer: "Saniya",
+           rating: 4,
+           comment: "An inspiring story with profound lessons.",
+       },
+   ],
+};
+
+console.log(book);
+// ================================================================
+
+// Create an object laptop with both primitive (brand, price) and non-primitive (features - an array) properties.
+
+const laptop = {
+   brand: "Dell", 
+   price: 12000, 
+   features: [ 
+       "16GB RAM",
+       "512GB SSD",
+       "Intel Core i7 Processor",
+       "15.6-inch Display",
+       "Backlit Keyboard"
+   ]
+};
+
+console.log(laptop);
+
+// ====================================================================
+// Create an object person with a method greet that prints a greeting message using the name property.
+ const person2 = {
+   Name : "Kamla",
+   greet : function(){
+  console.log(`hello My name is ${person2.Name}`)
+   }
+ }
+person2.greet()
+
+// =============================================================
+
+// Write a function buildTeam that takes an unknown number of team members using the rest operator and returns an array of their names.
+
+
+ function buildTeam(...member){
+   return member
+}
+
+console.log(buildTeam("Sachin", "Rahul", "Darvid", "Dhoni"))
+
+// ====================================================================
+
+// Create a function discountPrice that takes two positional arguments: price and discountPercentage. If no discount is provided, it should default to 10%.
+function discountPrice(price, discountPercentage = 10) {
+   const discountedAmount = (price * discountPercentage) / 100;
+   return price - discountedAmount;
+}
+
+
+console.log(discountPrice(100)); 
+
+// ========================================================================
+// Write a function describePet that accepts two arguments: petName and
+//  petType. If no petType is provided, it should default to "dog".
+
+function describePet(petName, petType = "dog") {
+   return `${petName} is a ${petType}.`;
+}
+
+
+console.log(describePet("Buddy"));
+
+// ===============================================================
+
+// Create a function calculateArea that accepts two arguments: length and width. If width is not provided, 
+// it should default to the same value as length (for a square).
+
+function calculateArea(length, width = length) {
+   return length * width;
+}
+
+console.log(calculateArea(5))
+
+// ========================================================
+
+// Write a function joinStrings that accepts an unknown number of strings
+//  using the rest operator and returns them concatenated into one string.
+
+function joinStrings(...strings) {
+   return strings.join('');
+}
+
+
+console.log(joinStrings("Hello", " ", "World", "!"));
+// ======================================================================
+
+// Create a function createUserProfile that accepts three arguments: name, email, and role. If no role is provided,
+//  it should default to "user".
+
+function createUserProfile(name, email, role = "user") {
+   return {
+       name: name,
+       email: email,
+       role: role,
+   };
+}
+
+
+const user1 = createUserProfile("Isha", "isha@example.com");
+const user2 = createUserProfile("babita", "babita@example.com", "teacher");
+
+console.log(user1);
+
+
+console.log(user2);
+
+// =========================================================================
+
+// Write a function divideNumbers that takes two arguments: a and b, with
+//  b defaulting to 1 if not provided.
+
+
+function divideNumbers(a, b = 1) {
+   return a / b;
+}
+
+
+console.log(divideNumbers(10)); 
+console.log(divideNumbers(10, 2));
+
+// ===========================================================================
+
+// Create a function combineArrays that accepts an unknown number of arrays using the rest operator
+//  and returns one combined array.
+
+function combineArrays(...arrays) {
+   const result = [];
+   for (const array of arrays) {
+       for (const element of array) {
+           result.push(element);
+       }
+   }
+   return result;
+}
+
+
+console.log(combineArrays([1, 2], [3, 4], [5, 6])); 
+
+
+console.log(combineArrays(["a", "b"], ["c", "d"], ["e"])); 
+
+
+
+// =============================================================
+
+// Write a function introduceEmployee that takes two positional arguments: employeeName and position, with position
+//  defaulting to "intern".
+
+function introduceEmployee(employeeName, position = "intern") {
+   return `Hello, my name is ${employeeName} and I am a ${position}.`;
+}
+
+console.log(introduceEmployee("Kamla")); 
+
+
+console.log(introduceEmployee("Shivnya", "developer")); 
+
+// =========================================================
+
+// Create a function findAverage that takes an unknown number of scores using the rest operator and returns the
+//  average score.
+
+function findAverage(...scores) {
+   let total = 0;
+   for (let i = 0; i < scores.length; i++) {
+       total += scores[i];
+   }
+   return total / scores.length;
+}
+
+
+console.log(findAverage(90, 85, 88, 92)); 
+console.log(findAverage(75, 80, 85));
+
+// =============================================
+
+// Write a function buildCar that accepts three arguments: brand, model, and year. 
+// If no year is provided, it should default to the current year.
+
+function buildCar(brand, model, year = new Date().getFullYear()) {
+   return {
+       brand: brand,
+       model: model,
+       year: year
+   };
+}
+
+
+const car1 = buildCar("Tata", "Top");
+const car2 = buildCar("Honda", "Civic", 2020);
+
+console.log(car1);
+
+
+console.log(car2); 
+
+
+// hoisting
+
+fun1()
+
+function fun1(){
+   console.log("funOne")
+}
+// ====================================
+
+// call apply bind
+
+// function returning object
+
+let person11 = {
+   Name: "John",
+   Age: 30,
+   Address: {
+      street: "123 main st",
+      city: "Jaipur",
+      state: "CA",
+   },
+   about: function(){
+      console.log(`my name is ${this.Name}`)
+   }
+}
+person11.about()
+
+
+let person111 = {
+   Name: "John",
+   Age: 30,
+   Address: {
+      street: "123 main st",
+      city: "Jaipur",
+      state: "CA",
+   },
+   about: function(){
+      console.log(`my city is ${this.Address.city}`)
+   }
+}
+person111.about()
 
 
 
