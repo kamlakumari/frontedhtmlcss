@@ -512,110 +512,110 @@
 
 // Create a function greet that takes two positional arguments: name and greeting, and returns a personalized greeting message.
 
-function greet(name, greeting) {
-   return `${greeting}, ${name}!`;
-}
+// function greet(name, greeting) {
+//    return `${greeting}, ${name}!`;
+// }
 
-console.log(greet("Avani", "Hello"));
+// console.log(greet("Avani", "Hello"));
 
 // ---------------------------------------------------------
 
 // Write a function calculatePrice that takes two arguments: price and taxRate. If taxRate is not provided, it should default to 5%.
 
-function calculatePrice(price, taxRate = 0.05) {
-   return price + (price * taxRate);
-}
+// function calculatePrice(price, taxRate = 0.05) {
+//    return price + (price * taxRate);
+// }
 
 
-console.log(calculatePrice(100)); 
-console.log(calculatePrice(100, 0.1));
+// console.log(calculatePrice(100)); 
+// console.log(calculatePrice(100, 0.1));
 
 // ------------------------------------------------------------------------
 
 // Create a function sumNumbers that takes an unknown number of arguments using the rest operator and returns their sum.
 
-function sumNumbers(...numbers) {
-   return numbers.reduce((sum, number) => sum + number, 0);
-}
+// function sumNumbers(...numbers) {
+//    return numbers.reduce((sum, number) => sum + number, 0);
+// }
 
 
-console.log(sumNumbers(1, 2, 3, 4)); 
-console.log(sumNumbers(10, 20));     
-console.log(sumNumbers());
+// console.log(sumNumbers(1, 2, 3, 4)); 
+// console.log(sumNumbers(10, 20));     
+// console.log(sumNumbers());
 
 // ========================================================================
 
 // Create a function introduce that takes three positional arguments: firstName, lastName, and age, and returns a sentence introducing the person.
 
-function introduce(firstName, lastName, age) {
-   return `Hello, my name is ${firstName} ${lastName} and I am ${age} years old.`;
-}
+// function introduce(firstName, lastName, age) {
+//    return `Hello, my name is ${firstName} ${lastName} and I am ${age} years old.`;
+// }
 
 
-console.log(introduce("Kamla", "Bharia", 25)); 
+// console.log(introduce("Kamla", "Bharia", 25)); 
 
 
-console.log(introduce("Divyana", "Choudhary", 11)); 
+// console.log(introduce("Divyana", "Choudhary", 11)); 
 
 
 // ================================================================================
 
 // Write a function makeSandwich that takes two arguments: breadType and filling. The default value for breadType should be "whole wheat".
 
-function makeSandwich(breadType = "whole wheat", filling) {
-   return `Here is your ${filling} sandwich on ${breadType} bread.`;
-}
+// function makeSandwich(breadType = "whole wheat", filling) {
+//    return `Here is your ${filling} sandwich on ${breadType} bread.`;
+// }
 
 
-console.log(makeSandwich("sourdough", "turkey")); 
+// console.log(makeSandwich("sourdough", "turkey")); 
 
 
-console.log(makeSandwich(undefined, "peanut butter and jelly")); 
+// console.log(makeSandwich(undefined, "peanut butter and jelly")); 
 
 // ===================================================================
 
 // Create a function multiply that takes two positional arguments x and y, with a default value for y as 1, and returns the result of multiplying them.
 
-function multiply(x, y = 1) {
-   return x * y;
-}
+// function multiply(x, y = 1) {
+//    return x * y;
+// }
 
 
-console.log(multiply(5, 3));  
-console.log(multiply(7));     
-console.log(multiply(0, 10)); 
+// console.log(multiply(5, 3));  
+// console.log(multiply(7));     
+// console.log(multiply(0, 10)); 
 
 // ================================================================
 
 // Write a function getTotalPrice that takes an unknown 
 // number of prices as arguments using the rest operator and returns the total price.
 
-function getTotalPrice(...prices) {
-   let total = 0;
-   for (let price of prices) {
-       total += price;
-   }
-   return total;
-}
+// function getTotalPrice(...prices) {
+//    let total = 0;
+//    for (let price of prices) {
+//        total += price;
+//    }
+//    return total;
+// }
 
 
-console.log(getTotalPrice(10, 20, 30)); 
-console.log(getTotalPrice(5, 15));      
-console.log(getTotalPrice());    
+// console.log(getTotalPrice(10, 20, 30)); 
+// console.log(getTotalPrice(5, 15));      
+// console.log(getTotalPrice());    
 
 // ==============================================================
 
 // Create a function buildSentence that accepts three arguments: subject, verb, and object. If no object is passed, it should default to "something".
 
-function buildSentence(subject, verb, object = "something") {
-   return `${subject} ${verb} ${object}.`;
-}
+// function buildSentence(subject, verb, object = "something") {
+//    return `${subject} ${verb} ${object}.`;
+// }
 
 
-console.log(buildSentence("I", "like", "JavaScript")); 
+// console.log(buildSentence("I", "like", "JavaScript")); 
 
 
-console.log(buildSentence("She", "wants")); 
+// console.log(buildSentence("She", "wants")); 
 
 
 // ============================================================
@@ -623,227 +623,227 @@ console.log(buildSentence("She", "wants"));
 
 // Write a function addNumbers that takes an unknown number of numbers using the rest operator and returns the sum.
 
-function addNumbers(...numbers) {
-   let sum = 0;
-   for (let num of numbers) {
-       sum += num;
-   }
-   return sum;
-}
+// function addNumbers(...numbers) {
+//    let sum = 0;
+//    for (let num of numbers) {
+//        sum += num;
+//    }
+//    return sum;
+// }
 
 
-console.log(addNumbers(1, 2, 3, 4));  
-console.log(addNumbers(5, 15));        
-console.log(addNumbers(0));            
-console.log(addNumbers());  
+// console.log(addNumbers(1, 2, 3, 4));  
+// console.log(addNumbers(5, 15));        
+// console.log(addNumbers(0));            
+// console.log(addNumbers());  
 
 // ============================================================
 
 
 // Create a function displayInfo that takes three arguments: name, age, and city. If no city is provided, it should default to "Unknown".
-function displayInfo(name, age, city = "Unknown") {
-   return `${name}, ${age} years old, from ${city}.`;
-}
+// function displayInfo(name, age, city = "Unknown") {
+//    return `${name}, ${age} years old, from ${city}.`;
+// }
 
 
-console.log(displayInfo("Alka", 25, "Rajsthan")); 
+// console.log(displayInfo("Alka", 25, "Rajsthan")); 
 
 
-console.log(displayInfo("Babita", 30)); 
+// console.log(displayInfo("Babita", 30)); 
 
 // ==================================================
 
 // Write a function orderPizza that takes two arguments: size and topping. If no topping is provided, it should default to "cheese".
 
-function orderPizza(size, topping = "cheese") {
-   return `Order: ${size} pizza with ${topping} topping.`;
-}
+// function orderPizza(size, topping = "cheese") {
+//    return `Order: ${size} pizza with ${topping} topping.`;
+// }
 
 
-console.log(orderPizza("medium", "pepperoni")); 
+// console.log(orderPizza("medium", "pepperoni")); 
 
 
-console.log(orderPizza("large")); 
+// console.log(orderPizza("large")); 
 
 // =============================================================
 
 // Create a function makeCoffee that takes one required argument type and an unknown number of optional
 //  ingredients using the rest operator.
 
-function makeCoffee( type , ...ingredients){
-     return `Wav my ${type} tasty and have many ${ingredients}  `
-}
+// function makeCoffee( type , ...ingredients){
+//      return `Wav my ${type} tasty and have many ${ingredients}  `
+// }
 
-console.log(makeCoffee("Hotcoffee" , "water", "milk", "coffee", "sugar" ))
+// console.log(makeCoffee("Hotcoffee" , "water", "milk", "coffee", "sugar" ))
 
 
-console.log(makeCoffee("Hotcoffee", "unknown" ))
+// console.log(makeCoffee("Hotcoffee", "unknown" ))
 
 
 
 // Write a function introducePerson that takes two positional arguments name and profession,\
 //  with profession defaulting to "Student".
-  function introducePerson(name , profession = "Student"){
-       return (`My name is ${name} , i am a ${profession}`)
-  }
-   console.log(introducePerson("Avani" , "Teacher" ))
+//   function introducePerson(name , profession = "Student"){
+//        return (`My name is ${name} , i am a ${profession}`)
+//   }
+//    console.log(introducePerson("Avani" , "Teacher" ))
 
-   console.log(introducePerson("Avani"  ))
+//    console.log(introducePerson("Avani"  ))
 
    // ===================================================================
 
    // Write a function buildPerson that takes two arguments: firstName and lastName,
    //  and returns an object representing the person.
 
-   function personDetail(firstName, lastName){
-       return{
-         Firstname : firstName,
-         Lastname : lastName,
-         FullName : `${firstName} ${lastName}`
-       }
-   }
- let person = personDetail("Kamla" , "Bharia");
- console.log(person)
+//    function personDetail(firstName, lastName){
+//        return{
+//          Firstname : firstName,
+//          Lastname : lastName,
+//          FullName : `${firstName} ${lastName}`
+//        }
+//    }
+//  let person = personDetail("Kamla" , "Bharia");
+//  console.log(person)
 
 //  ================================================================
 
 // Create an object car with primitive properties: brand, model, and year.
 
-let car = {
-   brand : "Dezire",
-   model : "Top",
-   Year : 2016
-}
-console.log(car)
+// let car = {
+//    brand : "Dezire",
+//    model : "Top",
+//    Year : 2016
+// }
+// console.log(car)
 
-// =================================================================
+// // =================================================================
 
-// Create an object book with non-primitive properties: title, author, and reviews (where reviews is an array of review objects).
-const book = {
-   title: "Premchand Ki Kahani",
-   author: {
-       firstName: "Munsi",
-       lastName: "PremChand",
-   },
-   reviews: [
-       {
-           reviewer: "Sannu",
-           rating: 5,
-           comment: "A timeless classic that captures the human spirit.",
-       },
-       {
-           reviewer: "Saniya",
-           rating: 4,
-           comment: "An inspiring story with profound lessons.",
-       },
-   ],
-};
+// // Create an object book with non-primitive properties: title, author, and reviews (where reviews is an array of review objects).
+// const book = {
+//    title: "Premchand Ki Kahani",
+//    author: {
+//        firstName: "Munsi",
+//        lastName: "PremChand",
+//    },
+//    reviews: [
+//        {
+//            reviewer: "Sannu",
+//            rating: 5,
+//            comment: "A timeless classic that captures the human spirit.",
+//        },
+//        {
+//            reviewer: "Saniya",
+//            rating: 4,
+//            comment: "An inspiring story with profound lessons.",
+//        },
+//    ],
+// };
 
-console.log(book);
+// console.log(book);
 // ================================================================
 
 // Create an object laptop with both primitive (brand, price) and non-primitive (features - an array) properties.
 
-const laptop = {
-   brand: "Dell", 
-   price: 12000, 
-   features: [ 
-       "16GB RAM",
-       "512GB SSD",
-       "Intel Core i7 Processor",
-       "15.6-inch Display",
-       "Backlit Keyboard"
-   ]
-};
+// const laptop = {
+//    brand: "Dell", 
+//    price: 12000, 
+//    features: [ 
+//        "16GB RAM",
+//        "512GB SSD",
+//        "Intel Core i7 Processor",
+//        "15.6-inch Display",
+//        "Backlit Keyboard"
+//    ]
+// };
 
-console.log(laptop);
+// console.log(laptop);
 
 // ====================================================================
 // Create an object person with a method greet that prints a greeting message using the name property.
- const person2 = {
-   Name : "Kamla",
-   greet : function(){
-  console.log(`hello My name is ${person2.Name}`)
-   }
- }
-person2.greet()
+//  const person2 = {
+//    Name : "Kamla",
+//    greet : function(){
+//   console.log(`hello My name is ${person2.Name}`)
+//    }
+//  }
+// person2.greet()
 
 // =============================================================
 
 // Write a function buildTeam that takes an unknown number of team members using the rest operator and returns an array of their names.
 
 
- function buildTeam(...member){
-   return member
-}
+//  function buildTeam(...member){
+//    return member
+// }
 
-console.log(buildTeam("Sachin", "Rahul", "Darvid", "Dhoni"))
+// console.log(buildTeam("Sachin", "Rahul", "Darvid", "Dhoni"))
 
 // ====================================================================
 
 // Create a function discountPrice that takes two positional arguments: price and discountPercentage. If no discount is provided, it should default to 10%.
-function discountPrice(price, discountPercentage = 10) {
-   const discountedAmount = (price * discountPercentage) / 100;
-   return price - discountedAmount;
-}
+// function discountPrice(price, discountPercentage = 10) {
+//    const discountedAmount = (price * discountPercentage) / 100;
+//    return price - discountedAmount;
+// }
 
 
-console.log(discountPrice(100)); 
+// console.log(discountPrice(100)); 
 
 // ========================================================================
 // Write a function describePet that accepts two arguments: petName and
 //  petType. If no petType is provided, it should default to "dog".
 
-function describePet(petName, petType = "dog") {
-   return `${petName} is a ${petType}.`;
-}
+// function describePet(petName, petType = "dog") {
+//    return `${petName} is a ${petType}.`;
+// }
 
 
-console.log(describePet("Buddy"));
+// console.log(describePet("Buddy"));
 
 // ===============================================================
 
 // Create a function calculateArea that accepts two arguments: length and width. If width is not provided, 
 // it should default to the same value as length (for a square).
 
-function calculateArea(length, width = length) {
-   return length * width;
-}
+// function calculateArea(length, width = length) {
+//    return length * width;
+// }
 
-console.log(calculateArea(5))
+// console.log(calculateArea(5))
 
 // ========================================================
 
 // Write a function joinStrings that accepts an unknown number of strings
 //  using the rest operator and returns them concatenated into one string.
 
-function joinStrings(...strings) {
-   return strings.join('');
-}
+// function joinStrings(...strings) {
+//    return strings.join('');
+// }
 
 
-console.log(joinStrings("Hello", " ", "World", "!"));
+// console.log(joinStrings("Hello", " ", "World", "!"));
 // ======================================================================
 
 // Create a function createUserProfile that accepts three arguments: name, email, and role. If no role is provided,
 //  it should default to "user".
 
-function createUserProfile(name, email, role = "user") {
-   return {
-       name: name,
-       email: email,
-       role: role,
-   };
-}
+// function createUserProfile(name, email, role = "user") {
+//    return {
+//        name: name,
+//        email: email,
+//        role: role,
+//    };
+// }
 
 
-const user1 = createUserProfile("Isha", "isha@example.com");
-const user2 = createUserProfile("babita", "babita@example.com", "teacher");
+// const user1 = createUserProfile("Isha", "isha@example.com");
+// const user2 = createUserProfile("babita", "babita@example.com", "teacher");
 
-console.log(user1);
+// console.log(user1);
 
 
-console.log(user2);
+// console.log(user2);
 
 // =========================================================================
 
@@ -851,34 +851,34 @@ console.log(user2);
 //  b defaulting to 1 if not provided.
 
 
-function divideNumbers(a, b = 1) {
-   return a / b;
-}
+// function divideNumbers(a, b = 1) {
+//    return a / b;
+// }
 
 
-console.log(divideNumbers(10)); 
-console.log(divideNumbers(10, 2));
+// console.log(divideNumbers(10)); 
+// console.log(divideNumbers(10, 2));
 
 // ===========================================================================
 
 // Create a function combineArrays that accepts an unknown number of arrays using the rest operator
 //  and returns one combined array.
 
-function combineArrays(...arrays) {
-   const result = [];
-   for (const array of arrays) {
-       for (const element of array) {
-           result.push(element);
-       }
-   }
-   return result;
-}
+// function combineArrays(...arrays) {
+//    const result = [];
+//    for (const array of arrays) {
+//        for (const element of array) {
+//            result.push(element);
+//        }
+//    }
+//    return result;
+// }
 
 
-console.log(combineArrays([1, 2], [3, 4], [5, 6])); 
+// console.log(combineArrays([1, 2], [3, 4], [5, 6])); 
 
 
-console.log(combineArrays(["a", "b"], ["c", "d"], ["e"])); 
+// console.log(combineArrays(["a", "b"], ["c", "d"], ["e"])); 
 
 
 
@@ -887,96 +887,189 @@ console.log(combineArrays(["a", "b"], ["c", "d"], ["e"]));
 // Write a function introduceEmployee that takes two positional arguments: employeeName and position, with position
 //  defaulting to "intern".
 
-function introduceEmployee(employeeName, position = "intern") {
-   return `Hello, my name is ${employeeName} and I am a ${position}.`;
-}
+// function introduceEmployee(employeeName, position = "intern") {
+//    return `Hello, my name is ${employeeName} and I am a ${position}.`;
+// }
 
-console.log(introduceEmployee("Kamla")); 
+// console.log(introduceEmployee("Kamla")); 
 
 
-console.log(introduceEmployee("Shivnya", "developer")); 
+// console.log(introduceEmployee("Shivnya", "developer")); 
 
 // =========================================================
 
 // Create a function findAverage that takes an unknown number of scores using the rest operator and returns the
 //  average score.
 
-function findAverage(...scores) {
-   let total = 0;
-   for (let i = 0; i < scores.length; i++) {
-       total += scores[i];
-   }
-   return total / scores.length;
-}
+// function findAverage(...scores) {
+//    let total = 0;
+//    for (let i = 0; i < scores.length; i++) {
+//        total += scores[i];
+//    }
+//    return total / scores.length;
+// }
 
 
-console.log(findAverage(90, 85, 88, 92)); 
-console.log(findAverage(75, 80, 85));
+// console.log(findAverage(90, 85, 88, 92)); 
+// console.log(findAverage(75, 80, 85));
 
 // =============================================
 
 // Write a function buildCar that accepts three arguments: brand, model, and year. 
 // If no year is provided, it should default to the current year.
 
-function buildCar(brand, model, year = new Date().getFullYear()) {
-   return {
-       brand: brand,
-       model: model,
-       year: year
-   };
-}
+// function buildCar(brand, model, year = new Date().getFullYear()) {
+//    return {
+//        brand: brand,
+//        model: model,
+//        year: year
+//    };
+// }
 
 
-const car1 = buildCar("Tata", "Top");
-const car2 = buildCar("Honda", "Civic", 2020);
+// const car1 = buildCar("Tata", "Top");
+// const car2 = buildCar("Honda", "Civic", 2020);
 
-console.log(car1);
+// console.log(car1);
 
 
-console.log(car2); 
+// console.log(car2); 
 
 
 // hoisting
 
-fun1()
+// fun1()
 
-function fun1(){
-   console.log("funOne")
-}
+// function fun1(){
+//    console.log("funOne")
+// }
 // ====================================
 
-// call apply bind
+// call ,apply, bind Functions
 
 // function returning object
 
-let person11 = {
-   Name: "John",
-   Age: 30,
-   Address: {
-      street: "123 main st",
-      city: "Jaipur",
-      state: "CA",
-   },
-   about: function(){
-      console.log(`my name is ${this.Name}`)
-   }
-}
-person11.about()
+// let person11 = {
+//    Name: "John",
+//    Age: 30,
+//    Address: {
+//       street: "123 main st",
+//       city: "Jaipur",
+//       state: "CA",
+//    },
+//    about: function(){
+//       console.log(`my name is ${this.Name}`)
+//    }
+// }
+// person11.about()
 
 
-let person111 = {
-   Name: "John",
-   Age: 30,
+// let person111 = {
+//    Name: "John",
+//    Age: 30,
+//    Address: {
+//       street: "123 main st",
+//       city: "Jaipur",
+//       state: "CA",
+//    },
+//    about: function(){
+//       console.log(`my city is ${this.Address.city}`)
+//    }
+// }
+// person111.about()
+
+// =============================================
+
+// let person3 = {
+//    Name: "John2",
+//    Age: 30,
+//    Address: {
+//       street: "123 main st",
+//       city: "Jaipur",
+//       state: "CA",
+//    },
+  
+// }
+//  person11.about.call(person11)
+
+// person11.about.call(person3)
+
+// ================================================
+
+// let person11 = {
+//    Name: "John",
+//    Age: 30,
+//    Address: {
+//       street: "123 main st",
+//       city: "Jaipur",
+//       state: "CA",
+//    },
+//    about: function(hobby, hobby2){
+//       return `my name is ${this.Name} hobby is ${hobby} and ${hobby2}`
+//    }
+// }
+// person11.about()
+
+
+// let person3 = {
+//    Name: "John2",
+//    Age: 30,
+//    Address: {
+//       street: "123 main st",
+//       city: "Jaipur",
+//       state: "CA",
+//    },
+  
+// }
+
+// person11.about.call(person11, "playing chess", "cricket")
+
+// person11.about.call(person11, ["playing chess", "cricket"])
+
+// person11.about.apply(person11, ["playing chess", "cricket"])
+
+// bind
+
+// let  bio = person11.about.bind(person11, "playing chess", "cricket")
+
+// console.log(bio())
+
+// let bio = person11.about.call(person11, "playing chess", "cricket")
+
+// console.log(bio)
+
+
+let person = {
+   name: "john",
+   age: 30,
    Address: {
-      street: "123 main st",
-      city: "Jaipur",
-      state: "CA",
-   },
-   about: function(){
-      console.log(`my city is ${this.Address.city}`)
-   }
+            street: "123 main st",
+            city: "Jaipur",
+            state: "CA",
+         },
+
+ about: function(hobby, hobby2){
+                  // console.log(`my name is ${this.name} hobby is ${hobby} and ${hobby2}`)
+
+                  return `my name is ${this.name} hobby is ${hobby} and ${hobby2}`  //this only for bind function
+
+               }
 }
-person111.about()
+let user ={
+   name: "John3",
+   age:30
+}
+
+person.about.call(person, "play chess", "Kho-Kho")
+
+person.about.apply(person, ["play chess", "Kho-Kho"])
+
+let bio = person.about.bind(person, "play chess", "Kho-Kho")
+
+console.log(bio())
+
+
+
 
 
 
