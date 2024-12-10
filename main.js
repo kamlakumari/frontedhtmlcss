@@ -1039,42 +1039,178 @@
 // console.log(bio)
 
 
-let person = {
-   name: "john",
-   age: 30,
-   Address: {
-            street: "123 main st",
-            city: "Jaipur",
-            state: "CA",
-         },
+// let person = {
+//    name: "john",
+//    age: 30,
+//    Address: {
+//             street: "123 main st",
+//             city: "Jaipur",
+//             state: "CA",
+//          },
 
- about: function(hobby, hobby2){
+//  about: function(hobby, hobby2){
                   // console.log(`my name is ${this.name} hobby is ${hobby} and ${hobby2}`)
 
-                  return `my name is ${this.name} hobby is ${hobby} and ${hobby2}`  //this only for bind function
+//                   return `my name is ${this.name} hobby is ${hobby} and ${hobby2}`  //this only for bind function
 
-               }
+//                }
+// }
+// let user ={
+//    name: "John3",
+//    age:30
+// }
+
+// person.about.call(person, "play chess", "Kho-Kho")
+
+// person.about.apply(person, ["play chess", "Kho-Kho"])
+
+// let bio = person.about.bind(person, "play chess", "Kho-Kho")
+
+// console.log(bio())
+
+
+// =========================================================
+
+// function greet(greeting, punctuation) {
+//    return ${greeting}, ${this.name}${punctuation};
+// }
+
+// const person = { name: "Alice" };
+
+// Use the call method to invoke greet with person as the context and arguments "Hello" and "!".
+
+
+// function greet(greeting, punctuation) {
+//        return `${greeting}, ${this.name}${punctuation}`;
+//    }
+   
+//    const person = { name: "Alice" };
+
+// const res = greet.call(person , 'Hwllo', " ! ")
+// console.log(res )
+
+// ====================================================
+
+// function sum(a, b, c) {
+//    return a + b + c + this.offset;
+// }
+
+// const context = { offset: 5 };
+
+// Use `apply` to calculate the sum with the context and an array of arguments `[1, 2, 3]`.
+
+// function sum(a, b, c) {
+//     return a + b + c + this.offset;
+//     }
+   
+//     const context = { offset: 5 };
+  
+//     console.log(sum.apply(context,  [1, 2, 3]))
+
+   //  ==============================================================
+
+//    function describe(hobby, age) {
+//       return `${this.name} likes ${hobby} and is ${age} years old.`;
+//   }
+  
+//   const user = { name: "John" };
+  
+  // Use both `call` and `apply` to invoke `describe` with the context `user` and arguments "cycling" and 25.
+
+//   function describe(hobby, age) {
+//          return `${this.name} likes ${hobby} and is ${age} years old.`;
+//      }
+     
+//      const user = { name: "John" };
+
+//      console.log(describe.call(user , "cycling", "25"))
+    
+     
+//      console.log(describe.apply(user ,["cycling", "25"] ))
+
+   //   ======================================================
+
+   // const obj1 = { name: "David" };
+   // const obj2 = { name: "Sarah" };
+   
+   // function sayName() {
+   //     return this.name;
+   // }
+   
+   // Use `call` to borrow `sayName` from `obj1` and apply it to `obj2`.
+
+//    const obj1 = { name: "David" };
+//    const obj2 = { name: "Sarah" };
+   
+//    function sayName() {
+//        return this.name;
+//    }
+// console.log(obj1.name)
+
+//    console.log(sayName.call(obj2))
+
+   // ============================================
+
+//    function calculateFinalPrice(tax, discount) {
+//       return this.price + tax - discount;
+//   }
+  
+//   const product = { price: 100 };
+  
+  // Use `call`, `apply`, and `bind` to calculate the final price with tax = 20 and discount = 10.
+
+//   function calculateFinalPrice(tax, discount) {
+//    return this.price + tax - discount;
+// }
+
+// const product = { price: 100 };
+
+// console.log(calculateFinalPrice.call(product, 20 , 10))
+// console.log(calculateFinalPrice.apply(product,[20 , 10] ))
+
+
+
+// const res1 = calculateFinalPrice.bind(product, 20 , 10)
+
+// console.log(res1())
+
+// ====================================================
+
+// function ruturning objects
+
+// ----first Way------------
+
+// let person = function(firstName, lastName, age){
+//    let user = {}
+//    user.firstName= firstName,
+//    user.lastName= lastName,
+//    user.age= age
+//    user.about = function(){
+//     return `${this.firstName} ${this.lastName} ${this.age}`
+//    }
+//    return user
+// }
+//  let creatUser = person("Michel", "Jorden", 50)
+//  console.log(creatUser.about())
+
+
+// --------------Second Way---------------
+
+let anotherPerson = {
+   about : function(){
+      return  `${this.firstName} ${this.lastName}`
+   }
 }
-let user ={
-   name: "John3",
-   age:30
+let person = function(firstName, lastName, age){
+   let user = {}
+   user.firstName= firstName,
+   user.lastName= lastName,
+   user.age= age
+   user.about = anotherPerson.about
+   return user
 }
+ let creatUser = person("Michel", "Jorden", 50)
+ console.log(creatUser.about())
 
-person.about.call(person, "play chess", "Kho-Kho")
-
-person.about.apply(person, ["play chess", "Kho-Kho"])
-
-let bio = person.about.bind(person, "play chess", "Kho-Kho")
-
-console.log(bio())
-
-
-
-
-
-
-
-
-
-
+//  -----------Another Best Way---------------------
 
