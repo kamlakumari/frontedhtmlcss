@@ -1246,15 +1246,44 @@
 //  console.log(creatUser.about())
 
 
-let obj1 = {
-   name: "Kamla",
+// let obj1 = {
+//    name: "Kamla",
+//    about : function(){
+//             return  `${this.name}`
+//          }
+// }
+
+// let obj2 = Object.create(obj1)
+//    obj2.age = 20,
+//    obj2.gender = "male"
+
+//    console.log(obj2.about())
+
+   // =================================== 12-11-2024 --- _proto_ ==============================
+
+let anotherPerson ={
    about : function(){
-            return  `${this.name}`
-         }
+
+   },
+   bio: function(){
+      return `${this.firstName} ${this.lastName} ${this.age}`
+   },
+   sirName : function(){
+      return `${this.lastName}`
+   }
 }
 
-let obj2 = Object.create(obj1)
-   obj2.age = 20,
-   obj2.gender = "male"
+let person = function(firstName, lastName, age){
+   user = Object.create(anotherPerson)
+    user.firstName = firstName;
+    user.lastName = lastName;
+    user.age = age;
 
-   console.log(obj2.about())
+    return user
+
+}
+
+let createdUser = person("Michel", "Jorden", 20)
+console.log(createdUser.bio())
+
+console.log(createdUser.sirName())
