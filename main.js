@@ -292,7 +292,7 @@
 // console.log(gender)
    
 
-// destrucring
+// destrucring*******************************
 
 // let { firstname:fn , age:a , grnder } = user
 // console.log(fn, a)
@@ -508,7 +508,7 @@
 // -------------------------------------------------------------------
 
 
-// About function
+// About function***********************
 
 // Create a function greet that takes two positional arguments: name and greeting, and returns a personalized greeting message.
 
@@ -945,7 +945,7 @@
 // }
 // ====================================
 
-// call ,apply, bind Functions
+// call ,apply, bind Functions**************************
 
 // function returning object
 
@@ -1176,7 +1176,7 @@
 
 // ====================================================
 
-// function ruturning objects
+// function ruturning objects****************
 
 // ----first Way------------
 
@@ -1196,21 +1196,65 @@
 
 // --------------Second Way---------------
 
-let anotherPerson = {
-   about : function(){
-      return  `${this.firstName} ${this.lastName}`
-   }
-}
-let person = function(firstName, lastName, age){
-   let user = {}
-   user.firstName= firstName,
-   user.lastName= lastName,
-   user.age= age
-   user.about = anotherPerson.about
-   return user
-}
- let creatUser = person("Michel", "Jorden", 50)
- console.log(creatUser.about())
+// let anotherPerson = {
+//    about : function(){
+//       return  `${this.firstName} ${this.lastName}`
+//    }
+// }
+// let person = function(firstName, lastName, age){
+//    let user = {}
+//    user.firstName= firstName,
+//    user.lastName= lastName,
+//    user.age= age
+//    user.about = anotherPerson.about
+//    return user
+// }
+//  let creatUser = person("Michel", "Jorden", 50)
+//  console.log(creatUser.about())
 
 //  -----------Another Best Way---------------------
 
+//   _proto_  or [[prototype]]  || protoitype 
+
+// let user = {
+//    name: "Shivem",
+//    age: 20
+// }
+//  let user2= Object.create(user)
+//    // name: "s",
+//    // gender: "male"
+//    user2.name = "s",
+//    user2.gender = "male"
+ 
+
+//  console.log(user2.age)
+
+// let anotherPerson = {
+//    about : function(){
+//       return  `${this.firstName} ${this.lastName}`
+//    }
+// }
+// let person = function(firstName, lastName, age){
+//    let user = Object.create(anotherPerson)
+//    user.firstName= firstName,
+//    user.lastName= lastName,
+//    user.age= age
+//    user.about = anotherPerson.about
+//    return user
+// }
+//  let creatUser = person("Michel", "Jorden", 50)
+//  console.log(creatUser.about())
+
+
+let obj1 = {
+   name: "Kamla",
+   about : function(){
+            return  `${this.name}`
+         }
+}
+
+let obj2 = Object.create(obj1)
+   obj2.age = 20,
+   obj2.gender = "male"
+
+   console.log(obj2.about())
