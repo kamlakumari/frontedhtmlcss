@@ -292,7 +292,7 @@
 // console.log(gender)
    
 
-// destrucring*******************************
+// **********************************************************destrucring*******************************
 
 // let { firstname:fn , age:a , grnder } = user
 // console.log(fn, a)
@@ -508,7 +508,7 @@
 // -------------------------------------------------------------------
 
 
-// About function***********************
+// *****************************************************About function***********************
 
 // Create a function greet that takes two positional arguments: name and greeting, and returns a personalized greeting message.
 
@@ -936,7 +936,7 @@
 // console.log(car2); 
 
 
-// hoisting
+// ***********************************************************hoisting-------------------------------
 
 // fun1()
 
@@ -945,7 +945,7 @@
 // }
 // ====================================
 
-// call ,apply, bind Functions**************************
+// *******************************************************call ,apply, bind Functions**************************
 
 // function returning object
 
@@ -1028,7 +1028,7 @@
 
 // person11.about.apply(person11, ["playing chess", "cricket"])
 
-// bind
+// ==============================================================       bind         ================================
 
 // let  bio = person11.about.bind(person11, "playing chess", "cricket")
 
@@ -1176,7 +1176,7 @@
 
 // ====================================================
 
-// function ruturning objects****************
+// ========================================================function ruturning objects****************
 
 // ----first Way------------
 
@@ -1214,7 +1214,7 @@
 
 //  -----------Another Best Way---------------------
 
-//   _proto_  or [[prototype]]  || protoitype 
+// =====================================================  _proto_  or [[prototype]]  || protoitype 
 
 // let user = {
 //    name: "Shivem",
@@ -1261,29 +1261,338 @@
 
    // =================================== 12-11-2024 --- _proto_ ==============================
 
-let anotherPerson ={
-   about : function(){
+// let anotherPerson ={
+//    about : function(){
 
-   },
-   bio: function(){
-      return `${this.firstName} ${this.lastName} ${this.age}`
-   },
-   sirName : function(){
-      return `${this.lastName}`
-   }
+//    },
+//    bio: function(){
+//       return `${this.firstName} ${this.lastName} ${this.age}`
+//    },
+//    sirName : function(){
+//       return `${this.lastName}`
+//    }
+// }
+
+// let person = function(firstName, lastName, age){
+//    user = Object.create(anotherPerson)
+//     user.firstName = firstName;
+//     user.lastName = lastName;
+//     user.age = age;
+
+//     return user
+
+// }
+
+// let createdUser = person("Michel", "Jorden", 20)
+// console.log(createdUser.bio())
+
+// console.log(createdUser.sirName())
+
+
+
+
+// -----------------------------------------------------------prototype-----------------------
+
+// -----------------------------------------------------object  .assign()----------------------------------
+
+// let obj1 = {
+//    name: "kamla",
+//    age: 18
+// }
+//  let obj2 = {
+//    a : 5,
+//    b: 88,
+//  }
+
+//  let obj = Object.assign(obj1, obj2)
+//  let obj = Object.assign(obj1,{})
+// let obj = Object.assign({a : 23 , c: 45}, obj2)
+// let obj = Object.assign(obj2, {a : 23 , c: 45})      //in this its first priority a take 23 not a= 5
+//  console.log(obj)
+
+// -------------------------------------------Object.freeze-----------------------------------------------
+
+// let detail = {
+//    name: "kamla",
+//    age: 30
+// }
+
+// Object.freeze(detail)
+ 
+
+// detail.name = "komaldff"
+// detail.age = 28
+// console.log(detail)
+
+
+// *****************************************************8	assignment objects ******************************************
+
+// 1. Create an object using Object.create with a prototype that includes a method to calculate the square of a number.
+
+
+//   let mathPrototype = {
+//     calculateSquire : function(val){
+//     return val*val;
+//    }
+//   }
+
+//   let proto = Object.create(mathPrototype);
+
+//   let value = 6;
+
+//   console.log(`Squire Number is : ${value}` ,proto.calculateSquire(value));
+
+//   =================================================================================
+
+//   2. Use Object.assign to merge two objects representing user profiles.
+// const user1 = { name: "Alice", age: 30 };
+// const user2 = { email: &quot;alice@example.com", country: "USA" };
+
+// const user1 = { 
+   
+//    name: "Alice",
+//     age: 30 
+// };
+
+// const user2 = { 
+//    email: "alice@example.com", 
+//    country: "USA"
+//  };
+
+
+//  let user = Object.assign(user1, user2)
+
+//  console.log(user)
+
+// ================================================================================
+
+//  3. Seal an object representing a book and attempt to add and modify its properties.
+
+// let book = {
+//    name : "Story of PremCahand",
+//    Author:  "Munsi Premchand",
+//    pages : 500 
+// }
+
+// Object.seal(book)
+
+// book.Author = "Kabir"
+
+// book.publisher = "Manmohan"
+
+// // console.log(book)
+
+// delete book.Author
+
+// console.log(book)
+
+// console.log(`Is the object sealed?`, Object.isSealed(book));
+
+// =======================================================================================
+
+// 4. Freeze an object representing a car and try to modify its properties.
+
+// let car = {
+//    name : "Swift Desire",
+//    model : 2022,
+//    // color : "White"
+// }
+
+// Object.freeze(car) 
+
+// car.name = "Creta";
+// car.color = "White";
+
+// delete car.model
+// console.log(car)
+
+// console.log(` Is car freeze ?  :` , Object.isFrozen(car))
+
+// ================================================================
+
+// 5. Verify if the objects in exercises 3 and 4 are sealed or frozen.
+
+// Its checked in Above both Questins 3 and 4
+
+// 6. Create an object using Object.create that inherits properties and methods from two prototypes.
+
+//  let proto1 ={
+//     greet : function (){
+//       return `Hello My Name Is ${this.name}`;
+//     }
+//  }
+
+//  let proto2 ={
+//    myAge : function (){
+//      return ` My Age is ${this.age}`;
+//    }
+// }
+
+// let BothProto = Object.assign({}, proto1, proto2);
+
+// BothProto.name = "Kamla"
+
+// BothProto.age = 18
+
+// let person = Object.create(BothProto);
+
+// console.log(person.greet())
+// console.log(person.myAge())
+
+// ================================================================
+
+// 7. Use Object.assign to create a shallow copy of an object
+
+// let aboutMe = {
+//    name : "kamla",
+//    age : 18,
+//    address:{
+//       city: "Fatehpur",
+//       village: "Nagardas"
+//    }
+// }
+
+// let sallowCopy = Object.assign({}, aboutMe);
+
+// sallowCopy.name = "Rekha"
+// sallowCopy.address.city = "Ramgarh"
+
+// console.log(aboutMe)
+// console.log(sallowCopy)
+
+// ======================================================
+
+// Seal an object and verify its properties cannot be deleted or added but can be modified.
+
+// let myCar = {
+//    name: "Oddy",
+//    model : 2024,
+
+// }
+
+// Object.seal(myCar)
+
+// delete myCar.name;
+
+// myCar.colour = "white"
+
+// myCar.name = "Scorpio"
+
+// console.log(myCar)
+
+// console.log(Object.isSealed(myCar))
+
+// ================================================================
+
+// Freeze an object and verify its properties cannot be modified or added.
+
+// let myNewCar = {
+//    name: "Oddy",
+//    model : 2024,
+
+// }
+
+// Object.freeze(myNewCar)
+
+// delete myNewCar.name;
+
+// myNewCar.colour = "white"
+
+// myNewCar.name = "Scorpio"
+
+// console.log(myNewCar)
+
+// console.log(Object.isFrozen(myNewCar))
+
+// ===========================================================
+
+// Create a function that seals an object and prevents further modification of properties.
+
+// let myfunction = function(obj){
+//    Object.seal(obj)
+//    return obj;
+// }
+
+// let address = {
+//    name: "Komal",
+//     age: 18, 
+//     city: "Sikar"
+// }
+
+// let sealedObj = myfunction(address)
+
+// sealedObj.name = "Kamla";
+
+// delete sealedObj.age;
+
+// sealedObj.country = "Indea"
+// console.log(myfunction(sealedObj))
+// console.log(Object.isSealed(sealedObj))
+
+//   ======================================================16-12-24==============================================
+
+// console.log(createdUser.__proto__)
+
+// =============================================prototype==============================================
+
+// let hello = function(){
+//    console.log("hello");
+// }
+
+// console.log(hello)
+// hello.prototype.name= "Kamla"
+// console.log(hello.prototype)
+
+// if(hello.prototype){
+//    console.log("property is exist")
+// }else{
+//    console.log("property is not exist")
+// }
+
+// let person = function(firstName,lastName,age){
+//    let user = Object.create(person.prototype)
+//    user.firstName = firstName;
+//    user.lastName = lastName;
+//    user.age = age;
+//    return user
+// }
+
+// person.prototype.about = function(){
+//    return `${this.firstName} ${this.lastName}`
+// }
+
+// let createdUser = person("Kamla", "Bharia", 29)
+// console.log(createdUser.about());
+
+// let  detail = function(){
+   
+//    detail.prototype.name="hg"
+//    let obj2 =  Object.create(detail.prototype)
+
+   
+//       obj2.state="Rajsthan",
+//       obj2.country = "India"
+//    return obj2;
+
+// }
+// let person =detail()
+
+// console.log(detail.prototype)
+
+
+// =========================================18-12-2024==================================
+
+//  new keyword-------------
+
+function FunObj(name,age,address){
+              //   let  obj1=Object.create(funObj.prototype)
+this.name=name
+this.age=age
+this.address=address
+FunObj.prototype.hobby="chess"
+                 // return obj1                   not return
 }
 
-let person = function(firstName, lastName, age){
-   user = Object.create(anotherPerson)
-    user.firstName = firstName;
-    user.lastName = lastName;
-    user.age = age;
-
-    return user
-
-}
-
-let createdUser = person("Michel", "Jorden", 20)
-console.log(createdUser.bio())
-
-console.log(createdUser.sirName())
+let user = new FunObj("Kamla", 25, "Jaipur")
+// console.log(user.hobby)
+console.log(user.name)
