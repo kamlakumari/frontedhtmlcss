@@ -1599,4 +1599,30 @@
 
 // ==============================================   call Back Function     ===============================
 
- 
+//       ********************************* Map,filter,reduce ******************************
+
+// let Arr =[2,5,6,3,8,9,44] 
+//  function squrefun(num){
+//    return num*num;
+//  }
+
+//  for(let a of Arr){
+//    console.log(squrefun(a))
+//  }
+
+let Arr =[2,5,6,3,8,9,44] 
+
+// function squrefun(num){
+//       // return num*2;
+//       return num+4
+//     }
+//  console.log(Arr.map(squrefun))
+
+function oddNum(num){
+   if(num%2===0){
+      return num
+   }
+   return false;
+}
+console.log(Arr.map(oddNum))
+
