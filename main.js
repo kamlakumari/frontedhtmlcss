@@ -1584,15 +1584,19 @@
 
 //  new keyword-------------
 
-function FunObj(name,age,address){
-              //   let  obj1=Object.create(funObj.prototype)
-this.name=name
-this.age=age
-this.address=address
-FunObj.prototype.hobby="chess"
-                 // return obj1                   not return
-}
+// function FunObj(name,age,address){
+//               //   let  obj1=Object.create(funObj.prototype)
+// this.name=name
+// this.age=age
+// this.address=address
+// FunObj.prototype.hobby="chess"
+//                  // return obj1                   not return
+// }
 
-let user = new FunObj("Kamla", 25, "Jaipur")
-// console.log(user.hobby)
-console.log(user.name)
+// let user = new FunObj("Kamla", 25, "Jaipur")
+// // console.log(user.hobby)
+// console.log(user.name)
+
+// ==============================================   call Back Function     ===============================
+
+ 
