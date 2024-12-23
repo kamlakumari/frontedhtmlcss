@@ -1610,7 +1610,7 @@
 //    console.log(squrefun(a))
 //  }
 
-let Arr =[2,5,6,3,8,9,44] 
+// let Arr =[2,5,6,3,8,9,44] 
 
 // function squrefun(num){
 //       // return num*2;
@@ -1618,11 +1618,63 @@ let Arr =[2,5,6,3,8,9,44]
 //     }
 //  console.log(Arr.map(squrefun))
 
-function oddNum(num){
-   if(num%2===0){
-      return num
-   }
-   return false;
-}
-console.log(Arr.map(oddNum))
+// function oddNum(num){
+//    if(num%2===0){
+//       return num
+//    }
+//    return false;
+// }
+// console.log(Arr.map(oddNum))
 
+// Arr.map((a)=>{
+   //    console.log(a*2)
+   // })
+   
+   // let Arr =[2,5,6,3,8,9,44] 
+   // Arr.map((d)=>{
+   //    console.log(d)
+   // })
+
+   // let strofArr = ["kamla", "komal", "Vimala", "Suman"]
+   
+   // strofArr.map((b)=>{
+   //    console.log(b.toUpperCase())
+   // })
+
+   // let data = [{}, [],{name:"sfg",age:33}, 565,"hello"]
+
+   // data.map((d)=>{
+   //    console.log(d)
+   // })
+
+   // let obj1={
+   //    name:"kamla",
+   //    age: 32,
+   // }
+   // let obj2={
+   //    name:"D",
+   //    age: 33,
+   // }
+   // let obj3={
+   //    name:"Avani",
+   //    age: 34,
+   // }
+   // let data = [obj1,obj2,obj3]
+   // data.map((obj)=>{
+   //    // console.log(obj.name)
+   //    console.log(obj.age)
+   // })
+   let data =[
+      {name:"kamla",age:23,gende:"female",sallery:55},
+      {name:"Divyana",age:33,gende:"female",sallery:65},
+      {name:"Avani",age:13,gende:"female",sallery:75},
+   ]
+  let saleries= data.map(person=>person.sallery);
+   
+      let totalSalery =0;
+      for(let sum of saleries){
+         totalSalery=totalSalery+sum
+      }
+      
+console.log(totalSalery)
+   
