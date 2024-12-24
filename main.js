@@ -1664,17 +1664,113 @@
    //    // console.log(obj.name)
    //    console.log(obj.age)
    // })
-   let data =[
-      {name:"kamla",age:23,gende:"female",sallery:55},
-      {name:"Divyana",age:33,gende:"female",sallery:65},
-      {name:"Avani",age:13,gende:"female",sallery:75},
-   ]
-  let saleries= data.map(person=>person.sallery);
+//    let data =[
+//       {name:"kamla",age:23,gende:"female",sallery:55},
+//       {name:"Divyana",age:33,gende:"female",sallery:65},
+//       {name:"Avani",age:13,gende:"female",sallery:75},
+//    ]
+//   let saleries= data.map(person=>person.sallery);
    
-      let totalSalery =0;
-      for(let sum of saleries){
-         totalSalery=totalSalery+sum
-      }
+//       let totalSalery =0;
+//       for(let sum of saleries){
+//          totalSalery=totalSalery+sum
+//       }
       
-console.log(totalSalery)
+// console.log(totalSalery)
+
+// let A= [2,3,4,5,6,7,8]
+
+// let result = A.map((a)=>{
+//    if(a%2===0){
+//       return a
+//    }
+// })
+// console.log(result)
+
+// ===================================================    filter (call back function)   ==============================================
+
+// let A= [2,3,4,5,6,7,8]
+
+// let result = A.filter((a)=>{
+//    if(a%2===0){
+//       return a
+//    } 
+// })
+// console.log(result)
+
+// ========================================  reduce  (call back function)  =============================
+
+// let A = [2,40,4,8,9,12,5]
+//  const res = A.reduce((a,c)=>{
+//    return a+c
+// })
+// console.log(res)
+// 
+
+// let preammount = 400;
+// const res = A.reduce((a,c)=>{
+//       return a+c
+//    },50)
+//    console.log(res)
+
+// const res = A.reduce((a,c)=>{
+//    return a+c
+// },0)
+// console.log(res)
+
    
+const complexData = [
+   {
+     id: 1,
+     name: "John Doe",
+     age: 30,
+     address: {
+       street: "123 Main St",
+       city: "Anytown",
+       country: "USA",
+     },
+     orders: [
+       { orderId: "A123", amount: 50.75, status: "completed" },
+       { orderId: "B456", amount: 30.25, status: "pending" },
+     ],
+   },
+   {
+     id: 2,
+     name: "Jane Smith",
+     age: 25,
+     address: {
+       street: "456 Oak St",
+       city: "Othercity",
+       country: "USA",
+     },
+     orders: [
+       { orderId: "C789", amount: 100.5, status: "completed" },
+       { orderId: "D012", amount: 75.2, status: "completed" },
+     ],
+   },
+ ]
+
+// 1... Filter users who are aged 25 or younger.
+
+
+// let ages = complexData.map((a)=>a.age)
+
+// let ages = complexData.filter((a)=>{
+//         return a.address
+//    // console.log("data is " ,a.age) 
+// })
+// console.log(ages) 
+
+// const youngUsers = complexData.filter(person => person.age <= 25);
+
+// const youngUsers =complexData.map(person => person.age <=25); 
+// console.log(youngUsers);
+
+//2... Map the array to get an array of user names.
+// let names = complexData.map((a)=>{
+//    console.log(a.name)
+// })
+
+// 3...Filter orders with an amount greater than 50.
+
+
