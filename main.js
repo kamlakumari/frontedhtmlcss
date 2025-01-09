@@ -1776,7 +1776,7 @@
 
 // ================================  07-1-2025---- ++++++++++++++++++++++++++++++
 
-let arr = [[1,2,3],[4,5,6],[7,8,9]]
+// let arr = [[1,2,3],[4,5,6],[7,8,9]]
 
 // let b = arr.reduce((a,  c)=>{
 //   return  [...a, ...c]
@@ -1801,5 +1801,96 @@ let arr = [[1,2,3],[4,5,6],[7,8,9]]
 //   return c
 // })
 // console.log(a)
+
+
+// let data1 = [
+//   {name:"kamla",age:26,city:"jaipur"},
+//   {name:"kavita",age:25,city:"jamnagar"},
+//   {name:"komal",age:21,city:"sikar"},
+//   {name:"Avani",age:6,city:"jaipur"},
+// ]
+
+// let output = data1.reduce((obj, data)=>{
+//   if(!obj[data.city]){                      // if not the city in the data that we want 
+//     obj[data.city]=[]                     //then we create empaty array
+//   }
+//   obj[data.city].push(data)          //and push all the data in the object from the data1 one by one in the every city matched
+//   return obj
+// },{})
+// console.log(output)
+
+// ======================================= ========================
+//Lexical Scope
+//clouser
+
+
+// function fun(){
+//    console.log(Name)
+// }
+// let Name = "Kamla"
+// fun()
+
+
+// let Name = "komal"
+//  function fun(){
+//    // let Name = "Sunita"
+//       console.log(Name)
+//    }
+  
+//    fun()
+
+
+//  let Name = "Hello"
+// function fun2(){
+//    let Name = "Subh"
+// }
+
+// console.log(Name)
+// fun2() 
+// output = hello
+
+// --------------------------------------------------
+
+// expression function---
+// let hello = "Shivem"
+//    //  fun2()
+// let fun2 = function(){
+//    console.log("hello")
+// }
+//    fun2()
+
+// -----------------------------------------------
+//arrow function
+
+
+// fun2()
+// let fun2 = ()=>{
+//    console.log("hello")
+// }
+
+// Annonymous function 
+
+// fun2()
+// function fun2(){
+//    console.log("hello")
+// }
+
+// -------------------------------------------------------
+
+// console.log("hello")
+
+// console.log(name1)
+// console.log(name2)
+// console.log(name3)
+
+// let name1 = "Kamla"
+// const name2 = "Shakshi"
+// var name3 = "Sarla"
+
+// we can not access the value before the initialisation in the let and const
+// and in the var we find the value error that undefined if varible is declare in the bottom
+
+
+
 
 
